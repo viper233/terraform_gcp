@@ -10,6 +10,6 @@ terraform {
 provider "google" {
   credentials = file(var.credentials)
   version     = "=3.18.0"
-  project     = var.project
+  project     = var.project_name
   region      = var.default_region
 }
