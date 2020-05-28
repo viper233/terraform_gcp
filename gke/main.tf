@@ -3,6 +3,10 @@ resource "google_container_cluster" "primary" {
   location           = "us-west2-a"
   initial_node_count = 3
 
+# Using a single zone is the cheapest way to bring up a multi-node cluster. You
+# would typically deploy to multiple zones in production for resiliance.
+
+
   min_master_version = "latest"
 
   master_auth {
